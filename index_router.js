@@ -16,6 +16,13 @@ router.get("/",async function(ctx,next){
 
 })
 
+router.get("/themes",async function(ctx,next){
+
+
+	await ctx.render("error.hbs",{msg:"<h1>error</h1>"})
+
+})
+
 
 //使用中间件 koa-views (render()方法)
 app.use(views(__dirname+server_config.template_url,{
